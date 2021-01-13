@@ -10,6 +10,14 @@ namespace PublisherSubscriberMechanism
     {
         static void Main(string[] args)
         {
+            Subscriber sub = new Subscriber();
+
+            Task.Factory.StartNew(() => sub.CallPublisher());
+
+            Console.WriteLine(" Program.cs ");
+
+            Console.ReadLine();
+
         }
     }
 }
